@@ -4,7 +4,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const { errors } = require('celebrate');
 
-const { PORT = 3000, BASE_PATH = 'localhost' } = process.env;
+const { PORT = 5000, BASE_PATH = 'localhost' } = process.env;
 const cors = require('cors');
 
 // защита приложения
