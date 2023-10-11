@@ -37,8 +37,8 @@ app.use(cors({
     'http://localhost:5000',
     'https://localhost:3000',
     'https://localhost:5000',
-    'http://sv-rubik-diploma.nomoredomainsrocks.ru/',
-    'https://sv-rubik-diploma.nomoredomainsrocks.ru/',
+    'http://sv-rubik-diploma.nomoredomainsrocks.ru',
+    'https://sv-rubik-diploma.nomoredomainsrocks.ru',
   ],
 }));
 
