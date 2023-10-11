@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const { errors } = require('celebrate');
 
 const { PORT = 5000, BASE_PATH = 'localhost' } = process.env;
-// const cors = require('cors');
+const cors = require('cors');
 
 // защита приложения
 const helmet = require('helmet');
@@ -26,6 +26,17 @@ const router = require('./routes/index');
 const errorsHandler = require('./middlewares/errorsHandler');
 
 // app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:3000',
+    'http://localhost:5000',
+    'https://localhost:3000',
+    'https://localhost:5000',
+    'http://127.0.0.1',
+    'http://sv-rubik-diploma.nomoredomainsrocks.ru/',
+    'https://sv-rubik-diploma.nomoredomainsrocks.ru/',
+  ],
+}));
 app.use(helmet());
 app.use(limiter);
 
