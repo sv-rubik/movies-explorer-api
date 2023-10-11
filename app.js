@@ -33,8 +33,6 @@ app.use(limiter);
 mongoose.connect('mongodb://127.0.0.1:27017/bitfilmsdb');
 app.use(cors({
   origin: [
-    'localhost:3000',
-    'localhost:5000',
     'http://localhost:3000',
     'http://localhost:5000',
     'https://localhost:3000',
@@ -42,7 +40,9 @@ app.use(cors({
     'http://127.0.0.1:3000',
     'http://127.0.0.1:5000',
     'http://sv-rubik-diploma.nomoredomainsrocks.ru',
+    'http://sv-rubik-diploma.nomoredomainsrocks.ru/',
     'https://sv-rubik-diploma.nomoredomainsrocks.ru',
+    'https://sv-rubik-diploma.nomoredomainsrocks.ru/',
   ],
 }));
 
