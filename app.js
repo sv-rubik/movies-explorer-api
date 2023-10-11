@@ -5,12 +5,13 @@ const mongoose = require('mongoose');
 const { errors } = require('celebrate');
 
 const { PORT = 5000, BASE_PATH = 'localhost' } = process.env;
-const cors = require('cors');
+// const cors = require('cors');
 
 // защита приложения
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
+
 // const cors = require('./middlewares/cors');
 
 const limiter = rateLimit({
@@ -24,7 +25,7 @@ const app = express();
 const router = require('./routes/index');
 const errorsHandler = require('./middlewares/errorsHandler');
 
-app.use(cors());
+// app.use(cors());
 app.use(helmet());
 app.use(limiter);
 
